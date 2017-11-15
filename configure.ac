@@ -861,7 +861,7 @@ if test "${enable_crypto}" = "yes" -a "${with_crypto_library}" = "openssl"; then
 	saved_CFLAGS="${CFLAGS}"
 	saved_LIBS="${LIBS}"
 	CFLAGS="${CFLAGS} ${OPENSSL_CFLAGS}"
-	LIBS="${LIBS} ${OPENSSL_LIBS}"
+	LIBS="${LIBS} ${OPENSSL_LIBS} -dl"
 
 	# If pkgconfig check failed or OPENSSL_CFLAGS/OPENSSL_LIBS env vars
 	# are used, check the version directly in the OpenSSL include file
